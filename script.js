@@ -3,7 +3,7 @@ function getWeather(){
     console.log(cityName);
  
 
-   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=6fa99e1f96f024f79970c5a3532b2ac6&units=metric`).then(res=>res.json()).then(data=>{
+   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=&units=metric`).then(res=>res.json()).then(data=>{
    console.log("hello thereee"); 
    displayWeather(data)
     
@@ -97,7 +97,7 @@ function getWeatherByLocation(){
     navigator.geolocation.getCurrentPosition((pos)=>{
       let lat = pos.coords.latitude;
       let long = pos.coords.longitude
-      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=10.51&lon=76.21&appid=c7f1c5cd6b943f74ff5618255419344a`).
+      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=10.51&lon=76.21&appid=`).
   then(res=>res.json()).then(data=>displayWeather(data))
     })
 
